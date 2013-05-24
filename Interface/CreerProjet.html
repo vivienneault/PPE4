@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.js"></script>
+<script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.min.js"></script>
+<link rel="stylesheet" href="../jquery-ui-1.9.1.custom/css/smoothness/jquery-ui-1.9.1.custom.css" />
+<link rel="stylesheet" href="../css/style.css"/>
+<script type="text/javascript" src="../Js/CreerProjet.js"></script>
+<title>Créer un projet</title>
+</head>
+<body>
+<a href="../index.html" style="color:white; font-family:Calibri; font-size:25px;" >SSII 21 : Gestion de projets</a>
+<table id="backAffectation">
+<tr>
+<td>
+<table id="header" width="250">
+	<tr><td height="100" align="right">
+	<a href="http://127.0.0.1:2121/PPE4/Interface/GererPlanning.html" id='lienHeader' class="menu">
+		Planning
+	</a>&nbsp;
+	</td></tr>
+	<tr><td height="100" align="right">
+		<a href="http://127.0.0.1:2121/PPE4/Interface/CreerProjet.html" id='lienHeader' class="menu">
+		Créer un projet
+	</a>&nbsp;
+	</td></tr>
+	<tr><td height="100" align="right">
+		<a href="http://127.0.0.1:2121/PPE4/Interface/AffecterCollaborateurs.html" id='lienHeader' class="menu">
+		Affecter collaborateurs
+	</a>
+	</td></tr>
+</table>
+</td>
+<td>
+<table id="content" width="850">
+<tr>
+	<td align="center"><h3>&nbsp;Les sociétés</h3></td>
+</tr>
+<tr>
+<td align="center"><select id="cboSocietes" name="cboSocietes" class="cboSPC" ></select></td>
+</tr>
+<tr>
+<td align="center"><h3>&nbsp;Nom du projet</h3></td>
+</tr>
+<tr>
+<td align="center"><input type="text" id="txtNom" placeholder="Nom du projet" name="txtNom" class="cboSPC"/></td>
+</tr>
+<tr>
+<td><center><br><input type="button" class="button" id="cmdCreerProjet" name="cmdCreerProjet" value="Créer le projet"/></center></td>
+</tr>
+		<div id="AjoutSuccess" style="color:red;"></div>
+</body>
+
+</html>

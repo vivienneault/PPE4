@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!--Référence à la bibliothèque JQuery-->
+<script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.js"></script>
+<link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css"/>
+<!--Référence à la feuille de style-->
+<link rel="stylesheet" href="../css/style.css"/>
+<!--Référence au script javascript-->
+<script type="text/javascript" src="../Js/AffecterCollaborateurs.js"></script>
+<!--Définit le titre de la page-->
+<title>Affecter Collaborateurs</title>
+</head>
+
+<!--Corps de la page-->
+<body>
+<!--Lien vers la page d'accueil-->
+<a href="../index.html" style="color:white; font-family:Calibri; font-size:25px;" >SSII 21 : Gestion de projets</a>
+<!--Table permettant de disposer le menu et le corps de l'application-->
+<table id="backAffectation">
+<tr>
+	<td>
+		<!--Menu-->
+		<table id="header" width="250">
+			<tr>
+				<td height="100" align="right">
+					<!--Lien vers la page de planning-->
+					<a href="http://127.0.0.1:2121/PPE4/Interface/GererPlanning.html" id='lienHeader' class="menu">
+						Planning
+					</a>&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td height="100" align="right">
+					<!--Lien vers la page de création de projet-->
+					<a href="http://127.0.0.1:2121/PPE4/Interface/CreerProjet.html" id='lienHeader' class="menu">
+						Créer un projet
+					</a>&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td height="100" align="right">
+					<!--Lien vers la page d'affectation des collaborateurs-->
+					<a href="http://127.0.0.1:2121/PPE4/Interface/AffecterCollaborateurs.html" id='lienHeader' class="menu">
+						Affecter collaborateurs
+					</a>
+				</td>
+			</tr>
+		</table>
+	</td>
+<td>
+<!--Corps de l'application-->
+<table id="content" width="850">
+<tr>
+	<td>
+		<h3>&nbsp;Les sociétés</h3>
+	</td>
+	<td>
+		<h3>Les familles</h3>
+	</td>
+</tr>
+<tr>
+	<td>
+		<!--Liste déroulante des sociétés-->
+		&nbsp;<select id="cboSocietes" name="cboSocietes" class="cboAffect"></select>
+	</td>
+	<td>
+		<!--Liste déroulante des familles de métier-->
+		<select id="cboFamilles" name="cboFamilles" class="cboAffect" ></select>
+	</td>
+</tr>
+<tr>
+	<td>
+	<h3>&nbsp;Les projets</h3>
+	</td>
+	<td>
+	<h3>Les métiers</h3>
+	</td>
+</tr>
+<tr>
+	<td>
+	<!--Liste déroulante des projets selon la société choisie-->
+	&nbsp;<select id="cboProjets" name="cboProjets" size="6" class="cboAffect"></select>
+	</td>
+	<td>
+		<!--Liste déroulante des métiers selon la famille choisie-->
+		<select id="cboMetiers" name="cboMetiers" size="6" class="cboAffect"></select>
+	</td>
+</tr>
+<tr>
+	<td>
+		<h3>&nbsp;Les collaborateurs du projet</h3>
+	</td>
+	<td>
+		<h3>Les collaborateurs du projet</h3>
+	</td>
+</tr>
+<tr>
+	<td>
+		<!--Liste déroulante des collaborateurs du projet choisi-->
+		&nbsp;<select id="cboCollabs" name="cboCollabs" size="6" class="cboAffect"></select>
+	</td>
+	<td>
+		<!--Liste déroulante des collaborateurs du métier choisi-->
+		<select id="cboCollabsAjout" name="cboCollabsAjout" size="6" class="cboAffect"></select>
+	</td>
+</tr>
+<tr>
+	<td>
+	</td>
+	<td align="center">
+		<!--Champs texte qui, au clique, ouvrent un DatePicker JQuery-->
+		<input type="text" id="dtpD" placeholder="Date de début"/>&nbsp;
+		<input type="text" id="dtpF" placeholder="Date de fin"/>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+		<!--Bouton permettant l'affichage d'un popup JQuery-->
+		&nbsp;<input type="button" class="button" id="cmdModifAffectation" name="cmdModifAffectation" value="Modifier / Supprimer" onclick="Update()"/>
+	</td>
+	<td align="center">
+		<!--Bouton permettant l'affectation d'un collaborateur à un projet-->
+		<input type="button" class="button" id="cmdAjoutCollab" name="cmdAjoutCollab" value="Ajouter au projet" onclick="AffecterCollab()"/>
+	</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="informationsAffect">* Pour affecter un collaborateur, sélectionner un projet dans la liste des projets
+puis choisissez une famille, un métier et un collaborateur dans la liste de droite. Cliquez enfin sur "Ajouter au projet".<br>
+*Pour modifier une affectation, choisissez un projet dans la liste des projets puis sélectionnez un collaborateur et cliquer sur "Modifier/Supprimer".</div>
+<div id="modifAffectation" title="Affectation au projet"></div>
+</body>
+</html>
